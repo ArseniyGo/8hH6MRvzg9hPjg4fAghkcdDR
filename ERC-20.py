@@ -46,7 +46,7 @@ while True:
                     op = open('binancetokens.txt', 'w')
                     print(*bintok[0], *bintok[1], file = op)
                     op.close()
-                    send('*Coin*: #' + symbol + '\r\n' + 
+                    send('*Token*: #' + symbol + '\r\n' + 
                     '[Binance-Cold](https://etherscan.io/address/' + i['from'] + ')➡️[Binance-Hot](https://etherscan.io/address/' + i['to'] + ')\r\n' +
                     '[View Transaction](https://etherscan.io/tx/' + i['transactionHash'] + ')\r\n' + 
                     '#ERC20TX #BinanceTX')
@@ -57,13 +57,13 @@ while True:
                     op = open('binancetokens.txt', 'w')
                     print(*bintok[0], *bintok[1], file = op)
                     op.close()
-                    send('*Coin*: #' + symbol + '\r\n' + 
+                    send('*Token*: #' + symbol + '\r\n' + 
                     '[Binance-Hot](https://etherscan.io/address/' + i['from'] + ')➡️[Binance-Cold](https://etherscan.io/address/' + i['to'] + ')\r\n' +
                     '[View Transaction](https://etherscan.io/tx/' + i['transactionHash'] + ')\r\n' + 
                     '#ERC20TX #BinanceTX')
                 if price >= 100 and len(symbol) and i['tokenInfo'] and i['tokenInfo']['price']:
                     if not to == fromw == 'Binance-Hot':
-                        send('*Coin:* #' + symbol + '\r\n' + 
+                        send('*Token:* #' + symbol + '\r\n' + 
                         '*From:* [' + fromw + '](https://etherscan.io/address/' + i['from'] + ')\r\n' + 
                         '*To:* [' + to + '](https://etherscan.io/address/' + i['to'] + ')\r\n' + 
                         '*Amount:* ' + '{0:,}'.format(amount).replace(',', ' ') + ' *~' + str(price) + ' BTC*\r\n' + '[View Transaction](https://etherscan.io/tx/' + i['transactionHash'] + ')\r\n' +
