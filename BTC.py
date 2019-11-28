@@ -2,7 +2,7 @@ import requests
 import telebot
 import time
 import traceback
-bot = telebot.TeleBot("592804892:AAGPnvbvCRRlMv0AuyD_F0THfk7UMBtgU64")
+bot = telebot.TeleBot("")
 def send(m): #Функция для отправки сообщений
     global bot
     bot.send_message('-1001362959453', m, parse_mode = 'Markdown')
